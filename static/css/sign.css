@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #b8e0cf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background: #f9fffb;
+  width: 100%;
+  max-width: 420px;
+  padding: 35px 30px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.card h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+}
+
+form input:focus {
+  border-color: #7ac7a7;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #8fd0b3;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #7ac7a7;
+}
+
+.login-link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.login-link a {
+  color: #6bbfa3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Flash messages */
+.flash {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.flash.error {
+  background: #ffd6d6;
+  color: #a40000;
+}
+
+.flash.success {
+  background: #d6ffe6;
+  color: #0a6b3c;
+}
