@@ -3,9 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>User Page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/user.css') }}">
 </head>
 <body>
-  <h1>hello {{username}}</h1>
+  <div class="logout">
+    <a href="{{ url_for('login') }}">Logout</a>
+  </div>
+  <div class="card">
+    <h1>Hello {{ username }}</h1>
+    <p>Welcome to your dashboard 🎉</p>
+  </div>
+
 </body>
 </html>
+

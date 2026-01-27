@@ -28,7 +28,7 @@ def login():
      session["user_id"]=user.id
      session["username"]=user.username
 
-     return redirect(url_for("userpage"),username=username)
+     return redirect(url_for("userpage"))
   
   return render_template("logging.html")
 
@@ -50,16 +50,21 @@ def signin():
 
     flash("user sucessfully regestered","sucess")
 
-    return redirect(url_for("userpage"),username=username)
+    return redirect(url_for("userpage"))
 
   return render_template("signin.html")
 
 @app.route("/userpage")
 def userpage():
-  username = session.get("username")
-  if not username:
-      return redirect(url_for("login"))
-  return render_template("user_page.html", username=username)
+    # Get username from session
+    username = session.get("username")
+
+    if username is None:
+        flash("Please log in first", "error")
+        return redirect(url_for("login"))
+    return render_template("user_page.html", username=username)
+
+
 
 if __name__=="__main__":
   with app.app_context():
